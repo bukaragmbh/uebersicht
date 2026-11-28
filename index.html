@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'self' https://qdycgspamxfiurajizmt.supabase.co; frame-src 'self'; form-action 'none'; base-uri 'none'">
+<title>Bukara Übersichten</title>
+<style>
+:root { --teal:#0aa08f; --teal-d:#078273; --bg:#f0f2f2; --card:#fff; --text:#1b2a2a; --leise:#5c6b6b; --linie:#d5dbdb; --rot:#c8352b; }
+* { box-sizing:border-box; }
+html,body { margin:0; height:100%; background:var(--bg); color:var(--text); font-family:Segoe UI,Arial,sans-serif; font-size:16px; }
+#anmeldung { min-height:100%; display:flex; align-items:center; justify-content:center; padding:16px; }
+.kasten { width:100%; max-width:380px; background:var(--card); border-radius:12px; overflow:hidden; }
+.kopf { background:var(--teal); color:#fff; padding:20px; display:flex; justify-content:center; }
+.logo { height:34px; width:auto; display:block; }
+form { padding:20px; display:grid; gap:10px; }
+label { font-weight:600; }
+input { font:inherit; padding:10px 12px; border:1px solid var(--linie); border-radius:8px; width:100%; }
+button { font:inherit; font-weight:600; padding:10px 12px; border:0; border-radius:8px; background:var(--teal-d); color:#fff; cursor:pointer; }
+button:disabled { opacity:.6; cursor:wait; }
+#fehler { color:var(--rot); font-weight:600; min-height:1.3em; }
+#fenster { display:none; position:fixed; inset:0; width:100%; height:100%; border:0; background:var(--bg); }
+</style>
+</head>
+<body>
+<div id="anmeldung">
+  <div class="kasten">
+    <div class="kopf"><svg class="logo" viewBox="0 0 952 207" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bukara"><path d="M184.756 0.000488281C188.374 0.000488281 193.798 0.901103 198.248 3.52039C202.6 6.08295 205.982 10.2418 205.982 17.0039V48.2066L206.007 48.3569C206.644 52.3554 204.024 63.8957 184.103 71.2528C178.573 73.2949 168.484 76.9318 155.933 81.4261L156.568 85.1108H184.756C188.374 85.1108 193.798 86.0114 198.248 88.6307C202.6 91.1932 205.982 95.352 205.982 102.114V133.317L206.007 133.467C206.644 137.466 204.024 149.006 184.103 156.363C164.074 163.759 84.4115 192.021 44.6542 206.089V190.266L42.1338 191.161C26.3585 196.76 11.5124 202.019 0.0110396 206.089V169.61L125.876 124.83L125.89 124.827C131.728 122.705 136.21 120.717 139.188 118.51C142.241 116.247 143.988 113.526 143.677 110.046L143.458 107.613L141.165 108.425C118.185 116.557 71.9289 132.753 44.6542 141.993V126.613L42.1448 127.486C26.8298 132.813 11.6809 138.041 0.0110396 141.995V105.404H0V85.1108H0.0110396V84.4993L125.876 39.7197L125.89 39.7163C131.728 37.5946 136.21 35.6079 139.188 33.4018C142.241 31.139 143.988 28.4173 143.677 24.937L143.458 22.5049L141.165 23.3168C118.185 31.4487 71.9289 47.643 44.6542 56.8828V41.503L42.1448 42.376C26.8298 47.7028 11.6809 52.9305 0.0110396 56.8845V20.2945H0V0.000488281H184.756Z"></path><path d="M936.255 155.879H904.949C904.073 151.938 903.197 148.435 902.54 144.495C894.878 153.689 882.618 159.163 867.731 159.163C843.869 159.163 828.544 145.37 828.544 124.791C828.544 106.839 840.147 95.2364 862.915 90.6389L902.322 82.7576V74.4385C902.322 66.1193 895.535 62.1786 883.275 62.1786C870.577 62.1786 864.666 66.5572 863.134 77.0656L834.893 76.6277C837.082 51.8892 852.626 40.2861 883.056 40.2861C915.457 40.2861 931.876 54.5163 931.876 82.3198V132.235C931.876 142.743 932.971 150.187 936.255 155.879ZM876.488 136.394C891.156 136.394 902.322 127.418 902.322 110.78V102.461L873.423 108.591C864.01 110.561 858.755 115.378 858.755 122.821C858.755 130.921 865.104 136.394 876.488 136.394Z"></path><path d="M815.39 38.9766C818.674 38.9766 821.958 39.4144 825.242 40.509V68.7504C823.053 68.5315 821.082 68.3126 818.893 68.3126C800.065 68.3126 790.871 79.0399 790.871 100.932V155.883H760.002V42.9172H790.214L789.776 58.0231C794.592 45.7632 803.568 38.9766 815.39 38.9766Z"></path><path d="M742.554 155.879H711.248C710.372 151.938 709.497 148.435 708.84 144.495C701.178 153.689 688.918 159.163 674.031 159.163C650.168 159.163 634.843 145.37 634.843 124.791C634.843 106.839 646.446 95.2364 669.215 90.6389L708.621 82.7576V74.4385C708.621 66.1193 701.834 62.1786 689.575 62.1786C676.877 62.1786 670.966 66.5572 669.434 77.0656L641.192 76.6277C643.381 51.8892 658.925 40.2861 689.356 40.2861C721.757 40.2861 738.176 54.5163 738.176 82.3198V132.235C738.176 142.743 739.271 150.187 742.554 155.879ZM682.788 136.394C697.456 136.394 708.621 127.418 708.621 110.78V102.461L679.723 108.591C670.309 110.561 665.055 115.378 665.055 122.821C665.055 130.921 671.404 136.394 682.788 136.394Z"></path><path d="M595.128 155.875L565.136 106.836L553.752 118.439V155.875H522.883V0.000488281H553.752V85.6003L592.063 42.9098H630.813L586.809 87.3517L631.689 155.875H595.128Z"></path><path d="M470.105 42.9106H500.973V155.876H470.761L470.324 140.551C462.88 152.811 452.153 158.722 437.704 158.722C414.279 158.722 400.705 143.178 400.705 118.659V42.9106H431.574V111.653C431.574 123.475 437.047 130.919 447.993 130.919C461.129 130.919 470.105 120.191 470.105 103.334V42.9106Z"></path><path d="M351.711 71.1512C373.603 76.8433 381.922 92.6059 381.922 110.12C381.922 134.858 364.846 155.875 330.913 155.875H258.011V0.000488281H330.475C358.716 0.000488281 377.106 14.2306 377.106 38.0935C377.106 54.294 368.568 66.3348 351.711 71.1512ZM324.783 26.2715H290.412V60.2049H323.469C339.232 60.2049 345.362 52.5425 345.362 42.9098C345.362 33.0582 339.232 26.2715 324.783 26.2715ZM325.221 128.51C342.516 128.51 350.178 119.534 350.178 107.055C350.178 93.9194 341.64 86.476 326.753 86.476H290.412V128.51H325.221Z"></path><path d="M910 2.36328V0H926.429V2.36328H919.541V22H916.888V2.36328H910Z"></path><path d="M930.523 0H933.689L941.133 18.2617H941.39L948.834 0H952V22H949.519V5.28516H949.305L942.459 22H940.063L933.218 5.28516H933.004V22H930.523V0Z"></path></svg></div>
+    <form id="form">
+      <label for="pw">Passwort</label>
+      <input id="pw" type="password" autocomplete="current-password" required autofocus>
+      <button id="los" type="submit">Öffnen</button>
+      <div id="fehler" role="alert"></div>
+    </form>
+  </div>
+</div>
+<iframe id="fenster" title="Übersicht"></iframe>
+<script>
+let passwort = null, schluesselCache = null, inhalt = null, aktuell = "Versand_Uebersicht.html", position = 0;
+const fenster = document.getElementById("fenster");
+const bytes = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function schluessel(salz, runden) {
+  if (schluesselCache && schluesselCache.salz === salz) return schluesselCache.key;
+  const basis = await crypto.subtle.importKey("raw", new TextEncoder().encode(passwort), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey({ name:"PBKDF2", hash:"SHA-256", salt:bytes(salz), iterations:runden }, basis, { name:"AES-GCM", length:256 }, false, ["decrypt"]);
+  schluesselCache = { salz, key };
+  return key;
+}
+async function hole() {
+  const antwort = await fetch("daten.json?" + Date.now(), { cache:"no-store" });
+  if (!antwort.ok) throw new Error("netz");
+  const j = await antwort.json();
+  const key = await schluessel(j.salz, j.runden);
+  const klar = await crypto.subtle.decrypt({ name:"AES-GCM", iv:bytes(j.iv) }, key, bytes(j.ct));
+  const strom = new Blob([klar]).stream().pipeThrough(new DecompressionStream("gzip"));
+  return JSON.parse(await new Response(strom).text());
+}
+function zeige(name, merken) {
+  try { position = merken ? fenster.contentWindow.scrollY : 0; } catch (e) { position = 0; }
+  aktuell = name;
+  fenster.srcdoc = inhalt.seiten[name];
+}
+fenster.addEventListener("load", () => {
+  try {
+    const dok = fenster.contentDocument;
+    fenster.contentWindow.scrollTo(0, position);
+    dok.addEventListener("click", e => {
+      const a = e.target.closest("a[href]"); if (!a) return;
+      const ziel = a.getAttribute("href");
+      if (inhalt && inhalt.seiten[ziel]) { e.preventDefault(); zeige(ziel, false); }
+    });
+  } catch (e) {}
+});
+async function aktualisieren() {
+  try {
+    const neu = await hole();
+    if (neu.stand === inhalt.stand) return;
+    inhalt = neu;
+    // Die Aufgabenseite holt sich neue Daten selbst, damit eine angefangene Eingabe nicht verloren geht.
+    if (aktuell !== "Aufgaben_Uebersicht.html") zeige(aktuell, true);
+  } catch (e) {}
+}
+// Eingaben vom Handy: im Browser verschlüsseln und ins Postfach legen. Das Postfach sieht nur Geheimtext.
+const POSTFACH = "https://qdycgspamxfiurajizmt.supabase.co/rest/v1/aussen_postfach";
+const POSTFACH_KEY = "sb_publishable_K44M8guO_OYo0wwu-ckAXA_PVywqElW";
+const b64 = b => btoa(String.fromCharCode(...new Uint8Array(b)));
+const FRIST = 3600000;
+let wartendNeu = [], wartendStatus = {}, wartendMarken = {};
+async function einwerfen(nachricht) {
+  const salz = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12));
+  const basis = await crypto.subtle.importKey("raw", new TextEncoder().encode(passwort), "PBKDF2", false, ["deriveKey"]);
+  const key = await crypto.subtle.deriveKey({ name:"PBKDF2", hash:"SHA-256", salt:salz, iterations:600000 }, basis, { name:"AES-GCM", length:256 }, false, ["encrypt"]);
+  const ct = await crypto.subtle.encrypt({ name:"AES-GCM", iv }, key, new TextEncoder().encode(JSON.stringify(nachricht)));
+  const r = await fetch(POSTFACH, { method:"POST", headers:{ apikey:POSTFACH_KEY, "Content-Type":"application/json", Prefer:"return=minimal" }, body:JSON.stringify({ inhalt:JSON.stringify({ salz:b64(salz), iv:b64(iv), ct:b64(ct) }) }) });
+  if (!r.ok) throw new Error("Senden nicht möglich. Bitte erneut versuchen.");
+}
+window.bukaraAussen = {
+  marken() {
+    const jetzt = Date.now(); let liste = [...(inhalt.marken || [])];
+    for (const [nr, w] of Object.entries(wartendMarken)) {
+      const da = liste.some(m => m.nr === nr);
+      if (jetzt - w.zeit > FRIST || da === w.an) { delete wartendMarken[nr]; continue; }
+      liste = w.an ? [...liste, { nr, von:w.von, am:"gerade eben" }] : liste.filter(m => m.nr !== nr);
+    }
+    return liste;
+  },
+  async markeSetzen(nr, an, von) {
+    const zeit = Date.now();
+    await einwerfen({ art:"marke", zeit, von, nr, an });
+    wartendMarken[nr] = { zeit, an, von:von + " (mobil)" };
+  },
+  aufgaben() {
+    const jetzt = Date.now(), daten = (inhalt.aufgaben || []).map(a => ({ ...a }));
+    wartendNeu = wartendNeu.filter(w => jetzt - w.zeit < FRIST && !daten.some(a => a.ref === w.ref));
+    for (const [id, w] of Object.entries(wartendStatus)) {
+      const a = daten.find(x => x.id === id);
+      if (!a || jetzt - w.zeit > FRIST || a.status === w.status) { delete wartendStatus[id]; continue; }
+      a.status = w.status; a.notiz = w.notiz; a.erledigtVon = w.status === "erledigt" ? w.von : ""; a.erledigtAm = w.status === "erledigt" ? "gerade eben" : ""; a.wartet = true;
+    }
+    return { ich:"Außendienst", personen:inhalt.personen || [], aufgaben:[...daten, ...wartendNeu.map(w => w.aufgabe)] };
+  },
+  async senden(pfad, daten, von) {
+    const zeit = Date.now();
+    if (pfad === "api/aufgaben") {
+      const ref = crypto.randomUUID();
+      await einwerfen({ art:"neu", ref, zeit, von, vorgang:daten.vorgang, an:daten.an, text:daten.text, frist:daten.frist });
+      wartendNeu.push({ ref, zeit, aufgabe:{ id:"w" + ref, ref, wartet:true, vorgang:(daten.vorgang.match(/\d{6}/g) || []).join(", "), kunde:"", vorgangStatus:"", text:daten.text, an:daten.an.trim(), frist:daten.frist, status:"offen", von:von + " (mobil)", am:"gerade eben", erledigtVon:"", erledigtAm:"", notiz:"" } });
+      return {};
+    }
+    const id = (pfad.match(/^api\/aufgaben\/([0-9a-f]{32})\/status$/) || [])[1];
+    if (!id) throw new Error("Diese Aufgabe wird noch übertragen. Bitte in einigen Minuten erneut versuchen.");
+    await einwerfen({ art:"status", id, zeit, von, status:daten.status, notiz:daten.notiz });
+    wartendStatus[id] = { zeit, von:von + " (mobil)", status:daten.status, notiz:daten.notiz };
+    return {};
+  }
+};
+document.getElementById("form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const fehler = document.getElementById("fehler"), los = document.getElementById("los"), feld = document.getElementById("pw");
+  fehler.textContent = ""; los.disabled = true; passwort = feld.value; schluesselCache = null;
+  try {
+    inhalt = await hole();
+    feld.value = "";
+    document.getElementById("anmeldung").style.display = "none";
+    fenster.style.display = "block";
+    zeige(aktuell, false);
+    setInterval(aktualisieren, 120000);
+  } catch (err) {
+    passwort = null;
+    fehler.textContent = err.message === "netz" ? "Daten nicht erreichbar. Bitte später erneut versuchen." : "Passwort falsch.";
+  }
+  los.disabled = false;
+});
+</script>
+</body>
+</html>
